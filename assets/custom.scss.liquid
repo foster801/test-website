@@ -1,12 +1,19 @@
 .site-header {
     background-color: #245649;
     .site-header__mobile-nav {
+        display: flex;
+        justify-content: center;
         background-color: #245649;
+        .site-header__logo {
+            margin: 15px 16px 15px 0;
+        }
     }
     a {
         color: #fff;
     }
-    .btn--link, .icon-login {
+    .btn--link,
+    .icon-login,
+    .site-header__icons--plus {
         display: none;
     }
 }
