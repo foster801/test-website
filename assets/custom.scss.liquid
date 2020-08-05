@@ -17,6 +17,25 @@
         display: none;
     }
 }
+.slideshow__controls {
+    .slideshow__arrows {
+        background-color: transparent;
+        .slideshow__arrow {
+            display: none;
+        }
+        .slick-dots li {
+            margin: 0 10px;
+            a::before {
+                width: 14px;
+                height: 14px;
+                border-radius: 0;
+            }
+        }
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
 #shopify-section-1596571765697 .slideshow__btn {
     background-color: #245649;
 }
