@@ -39,13 +39,13 @@
     {% endunless %}
 
     <div class="collection-grid-item__title-wrapper">
-      <div class="collection-grid-item__title h3">
+      <button class="collection-grid-item__title h3 collection-grid-item__button">
         {% if collection.title == blank %}
           {{ 'homepage.onboarding.collection_title' | t }}
         {% else %}
           {{ collection.title }}
         {% endif %}
-      </div>
+      </button>
     </div>
   </a>
 </div>
