@@ -1,3 +1,19 @@
+{% assign base_font = settings.type_base_font %}
+
+{{ base_font | font_face }}
+
+{%- assign base_font_bolder = base_font | font_modify: 'weight', 'bolder' -%}
+{%- assign base_font_bold = base_font | font_modify: 'weight', 'bold' -%}
+{%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
+{%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
+
+{{ base_font_bold | font_face }}
+{{ base_font_bolder | font_face }}
+{{ base_font_italic | font_face }}
+{{ base_font_bold_italic | font_face }}
+
+$font-stack-body: {{ base_font.family }}, {{ base_font.fallback_families }};
+
 h2, .h2 {
     text-transform: none;
 }
@@ -11,6 +27,11 @@ h2, .h2 {
     padding-bottom: 27.5px;
 }
 
+
+#shopify-section-header {
+    padding-top: inherit;
+    padding-bottom: inherit;
+}
 .site-header {
     background-color: #245649;
     .site-header__mobile-nav {
@@ -18,7 +39,10 @@ h2, .h2 {
         justify-content: center;
         background-color: #245649;
         .site-header__logo {
-            margin: 15px 16px 15px 0;
+            margin: 2px 0 15px 27px;
+        }
+        .site-nav {
+            text-align: left;
         }
     }
     a {
@@ -55,11 +79,6 @@ h2, .h2 {
     }
 }
 
-// Main Slideshow
-// #shopify-section-1596567489978 {
-//     padding-bottom: 27.5px;
-// }
-
 // Featured Collections
 #shopify-section-1596570200288 {
     padding-top: 0;
@@ -72,6 +91,9 @@ h2, .h2 {
 
 // Featured Products
 .product-card {
+    .product-card__title {
+        font-family: $font-stack-body;
+    }
     position: relative;
     text-align: center;
     .price {
