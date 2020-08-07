@@ -76,6 +76,7 @@
               <span class="icon__fallback-text">{{ 'sections.slideshow.previous_slide' | t }}</span>
             </button>
           {% endif %}
+
           <ul class="product-single__thumbnails product-single__thumbnails-{{ section.id }}">
             {% for media in product.media %}
               <li class="product-single__thumbnails-item product-single__thumbnails-item--{{ section.settings.media_size }} js">
@@ -123,7 +124,6 @@
       <div class="product-single__meta">
 
         <h1 class="product-single__title">{{ product.title }}</h1>
-
           <div class="product__price">
             {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
           </div>
