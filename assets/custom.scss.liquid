@@ -44,6 +44,31 @@ h4,
 .section-header {
     margin-bottom: 27.5px;
 }
+@media only screen and (max-width: 749px) {
+    .slideshow__title,
+    .slideshow__subtitle {
+        display: block;
+    }
+    .slideshow__btn {
+        display: inline-block;
+    }
+    .slideshow__controls {
+        top: auto;
+        bottom: 0;
+        left: 0;
+    }
+    .slideshow__arrows {
+        display: flex;
+        }
+    .slideshow__subtitle--mobile,
+    .slideshow__title--mobile,
+    .slideshow__arrows--mobile,
+    .slideshow__btn--mobile,
+    .slideshow__text-content--mobile {
+        display: none !important;
+    }
+}
+
 
 /***********************************************
   HEADER
@@ -90,8 +115,8 @@ h4,
         .slick-dots li {
             margin: 0 10px;
             a::before {
-                width: 14px;
-                height: 14px;
+                width: 16px;
+                height: 16px;
                 border-radius: 0;
             }
         }
