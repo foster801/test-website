@@ -2,7 +2,7 @@
   <div class="page-width">
     <div class="section-header text-center">
       {% if section.settings.section_title != blank %}
-        <h2 class="h2">{{ section.settings.section_title | escape }}</h2>
+        <h2 class="h2">{{ 'icon-email.png' | asset_img_url: 'medium' | img_tag: 'email', 'email-icon' }}{{ section.settings.section_title | escape }}</h2>
       {% endif %}
     </div>
     <div class="grid">
